@@ -1,20 +1,21 @@
 const allowedCors = [
   "http://localhost:3001",
   "http://localhost:3000",
-  "https://pindieofficial.nomoredomainswork.ru/",
+  "https://deuce1023.nomoredomainswork.ru",
 ];
 
 function cors(req, res, next) {
   const { origin } = req.headers;
   console.log("req.headers", req.headers);
-  res.header("Access-Control-Allow-Origin", *);
-  res.header("Access-Control-Allow-Methods", "GET,HEAD,PUT,PATCH,POST,DELETE");
+  if (allowedCors.includes(origin)) {
+    res.header("Access-Control-Allow-Origin", origin);
+    res.header("Access-Control-Allow-Methods", "GET,HEAD,PUT,PATCH,POST,DELETE");
 
   res.header(
     "Access-Control-Allow-Headers",
     "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization"
   );
-
+  }
   next();
 }
 
