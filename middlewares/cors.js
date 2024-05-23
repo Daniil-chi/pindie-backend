@@ -2,7 +2,7 @@ const allowedCors = [
   "http://localhost:3001",
   "http://localhost:3000",
   "http://pindieofficial.nomoredomainswork.ru",
-  "https://pindiebackendanchi.nomoredomainswork.ru"
+  "https://pindiebackendanchi.nomoredomainswork.ru",
   "https://pindieofficial.nomoredomainswork.ru",
   "http://pindiebackendanchi.nomoredomainswork.ru"
 ];
